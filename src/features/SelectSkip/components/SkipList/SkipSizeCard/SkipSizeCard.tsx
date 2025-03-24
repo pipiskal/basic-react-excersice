@@ -1,6 +1,6 @@
 import styles from "./SkipSizeCard.module.css";
 import Tag from "../../../../../components/Tag/Tag";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, TriangleAlert } from "lucide-react";
 import Text from "../../../../../components/Text/Text";
 import Button from "../../../../../components/Button/Button";
 
@@ -51,18 +51,15 @@ const SkipSizeCard = ({
 
         {isPrivateProperty && (
           <div className={styles.privateProperty}>
-            <Check
-              color="var(--colors-blue)"
-              className={styles.checkMark}
-              size={32}
-            />
+            <TriangleAlert color="var(--colors-yellow)" size={16} />
 
             <Text
-              content={`${numberOfYards} Yard Skip`}
-              type="heading3"
-              size="lg"
+              content="Private Property Only"
+              type="span"
+              size="xs"
               fw={800}
               mb={8}
+              color="yellow"
             />
           </div>
         )}

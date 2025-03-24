@@ -20,7 +20,8 @@ body {
   --colors-white: rgba(255, 255, 255, 1);
   --colors-blue: rgba(0, 55, 193, 1);
   --colors-darkerBlue: rgba(0, 45, 161, 1);
-  /* --colors-lightGray: rgba(229, 231, 235, 1); */
+  --colors-yellow: rgba(234, 179, 8, 1);
+
   --colors-gray: rgba(156, 163, 175, 1);
   --colors-gray600: rgba(58, 58, 58, 1);
   --colors-gray700: rgba(42, 42, 42, 1);

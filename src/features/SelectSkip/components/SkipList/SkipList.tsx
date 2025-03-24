@@ -60,6 +60,7 @@ const SkipList = ({
                 pricePerWeek={skip.price_before_vat}
                 numberOfYards={skip.size}
                 onClick={() => onSkipSelection(skip.id)}
+                isPrivateProperty={skip.allowed_on_road}
               />
             );
           })}

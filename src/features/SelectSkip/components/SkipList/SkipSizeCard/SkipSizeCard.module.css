@@ -50,6 +50,23 @@
   right: -12px;
 }
 
+.privateProperty {
+  position: absolute;
+  bottom: var(--spacing-md);
+  left: var(--spacing-sm);
+  height: 28px;
+  padding: 0 12px;
+  border-radius: var(--radius-sm);
+  background-color: black;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+
+  & > span {
+    height: 16px;
+  }
+}
+
 .priceWrapper {
   margin-bottom: var(--spacing-mdl);
   display: flex;

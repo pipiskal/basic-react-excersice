@@ -12,6 +12,7 @@ const COLORS = {
   white: "var(--colors-white)",
   gray: "var(--colors-gray)",
   blue: "var(--colors-blue)",
+  yellow: "var(--colors-yellow)",
 } as const;
 
 const TEXT_TYPES = {
@@ -23,7 +24,7 @@ const TEXT_TYPES = {
 
 type TextType = keyof typeof TEXT_TYPES;
 type Color = keyof typeof COLORS;
-type TextSize = "sm" | "md" | "lg" | "xl";
+type TextSize = keyof typeof TEXT_SIZES;
 
 type TextProps = {
   content: string;
