@@ -18,6 +18,10 @@
   padding: var(--spacing-md);
 
   animation: revealFromBottom 0.2s linear;
+
+  @media (max-width: 1024px) {
+    height: 117px;
+  }
 }
 
 .bottomSheet {
@@ -26,10 +30,29 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    align-items: flex-end;
+  }
+}
+
+.skipDetails {
+  display: flex;
+  gap: var(--spacing-md);
+
+  @media (max-width: 1024px) {
+    justify-items: flex-end;
+  }
 }
 
 .actions {
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 }

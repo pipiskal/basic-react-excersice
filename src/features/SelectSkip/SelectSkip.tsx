@@ -32,12 +32,12 @@ const SelectSkip = ({ onContinue, onBack }: SelectSkipProps) => {
         content="Select the skip size that best suits your needs"
         type="span"
         color="gray"
-        fw={600}
+        fw={500}
         mb={32}
       />
 
       <SkipList
-        skips={skips.sort((a, b) => a.size - b.size)}
+        skips={skips}
         selectedSkipId={selectedSkipId}
         isLoading={isLoading}
         hasError={hasError}
@@ -48,6 +48,7 @@ const SelectSkip = ({ onContinue, onBack }: SelectSkipProps) => {
         <BottomSheet
           skipSize={selectedSkip.size}
           hireDays={selectedSkip?.hire_period_days}
+          price={selectedSkip.price_before_vat}
           onContinue={() => onContinue(selectedSkip)}
           onBack={onBack}
         />

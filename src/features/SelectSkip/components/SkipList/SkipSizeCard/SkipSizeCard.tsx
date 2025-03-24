@@ -85,9 +85,15 @@ const SkipSizeCard = ({
       />
 
       <div className={styles.priceWrapper}>
-        <Text content={`${pricePerWeek}`} type="span" />
+        <Text
+          content={`£${pricePerWeek}`}
+          type="span"
+          size="xl"
+          color="blue"
+          fw={700}
+        />
 
-        <Text content={title} type="span" />
+        <Text content="per week" type="span" color="gray" size="sm" />
       </div>
 
       <Button

@@ -50,5 +50,7 @@
 }
 
 .priceWrapper {
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-mdl);
+  display: flex;
+  gap: var(--spacing-sm);
 }

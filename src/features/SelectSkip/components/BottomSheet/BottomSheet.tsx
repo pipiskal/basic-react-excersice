@@ -5,6 +5,7 @@ import Button from "../../../../components/Button/Button";
 type BottomSheetProps = {
   skipSize: number;
   hireDays: number;
+  price: number;
   onBack: () => void;
   onContinue: () => void;
 };
@@ -12,6 +13,7 @@ type BottomSheetProps = {
 const BottomSheet = ({
   skipSize,
   hireDays,
+  price,
   onBack,
   onContinue,
 }: BottomSheetProps) => {
@@ -26,10 +28,17 @@ const BottomSheet = ({
             fw={600}
           />
 
-          <Text content="£" type="span" color="blue" fw={600} size="xl" />
+          {/* Currency symbol should be dynamic depending on the Country etc.. */}
+          <Text
+            content={`£${price}`}
+            type="span"
+            color="blue"
+            fw={600}
+            size="xl"
+          />
 
           <Text
-            content={`${hireDays} day hire`}
+            content={`${hireDays} day hire period`}
             type="span"
             color="gray"
             fw={600}

@@ -18,7 +18,8 @@ const useSkipQuery = () => {
 
       const json: SkipItem[] = await response.json();
 
-      setSkips(json);
+      // sort them write away based on size
+      setSkips(json.sort((a, b) => a.size - b.size));
     } catch (error: any) {
       // we can do specific error handling maybe depending on the status or cause? but for now in any case an error appears with handle all of them in one way
 
