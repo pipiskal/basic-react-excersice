@@ -5,13 +5,28 @@
   user-select: none;
   border-radius: var(--radius-sm);
   padding: var(--spacing-smd) var(--spacing-md);
-  background-color: var(--colors-blue);
   cursor: pointer;
 
   &:hover {
     background-color: var(--colors-darkerBlue);
   }
 
-  /* transition: all 0.15s ease; */
-  /* transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+  &.primary {
+    background-color: var(--colors-blue);
+
+    &:hover {
+      background-color: var(--colors-darkerBlue);
+    }
+  }
+
+  &.secondary {
+    background-color: var(--colors-gray700);
+
+    &:hover {
+      background-color: var(--colors-gray600);
+    }
+  }
+
+  transition: all 0.15s ease;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

@@ -12,7 +12,7 @@ type ButtonProps = {
 const Button = ({ content, variant, onClick }: ButtonProps): JSX.Element => {
   return (
     <button
-      className={`${styles.wrapper} align-justify-center`}
+      className={`${styles.wrapper} ${styles[variant]} align-justify-center`}
       onClick={onClick}
     >
       <Text content={content} type="span" fw={600} />

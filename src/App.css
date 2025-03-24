@@ -1,6 +1,7 @@
 .App {
   min-height: 100dvh;
+  max-width: 1280px;
+  margin: 0 auto;
   overflow: hidden;
   padding: var(--spacing-xl) var(--spacing-md);
-  background-color: var(--colors-backgroundGray);
 }

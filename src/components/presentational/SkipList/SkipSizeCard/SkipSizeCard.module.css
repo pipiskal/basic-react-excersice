@@ -1,6 +1,4 @@
 .wrapper {
-  max-width: 390px;
-
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -14,9 +12,11 @@
     border-color: var(--colors-darkerBlue);
   }
 
-  &.selected {
+  &.selectedItem {
     border-color: var(--colors-blue);
   }
+
+  transition: all 0.15s ease;
 }
 
 .imageWrapper {

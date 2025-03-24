@@ -27,7 +27,10 @@ const SkipSizeCard = ({
   onClick,
 }: SkipSizeCardProps): JSX.Element => {
   return (
-    <div className={`${styles.wrapper} ${isSelected && styles.selected}`}>
+    <div
+      className={`${styles.wrapper} ${isSelected && styles.selectedItem}`}
+      onClick={onClick}
+    >
       <div className={styles.imageWrapper}>
         <img
           src={image}
@@ -88,7 +91,11 @@ const SkipSizeCard = ({
         <Text content={title} type="span" />
       </div>
 
-      <Button content="Selected" variant={"primary"} onClick={onClick} />
+      <Button
+        content={isSelected ? "Selected" : "Select this skip"}
+        variant={isSelected ? "primary" : "secondary"}
+        onClick={onClick}
+      />
     </div>
   );
 };
