@@ -1,6 +1,7 @@
 import styles from "./BottomSheet.module.css";
 import Text from "../../../../components/Text/Text";
 import Button from "../../../../components/Button/Button";
+import { ArrowRight } from "lucide-react";
 
 type BottomSheetProps = {
   skipSize: number;
@@ -58,6 +59,7 @@ const BottomSheet = ({
             variant="primary"
             size="md"
             onClick={onContinue}
+            iconRight={<ArrowRight size={16} color="var(--colors-white)" />}
           />
         </div>
       </div>

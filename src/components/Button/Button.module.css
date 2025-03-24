@@ -3,6 +3,7 @@
   font-family: inherit;
   border: none;
   user-select: none;
+
   border-radius: var(--radius-sm);
   padding: var(--spacing-smd) var(--spacing-md);
   cursor: pointer;
@@ -37,4 +38,8 @@
 
   transition: all 0.15s ease;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.iconWrapper {
+  margin-left: var(--spacing-sm);
 }

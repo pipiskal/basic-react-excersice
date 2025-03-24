@@ -1,6 +1,6 @@
 import styles from "./SkipSizeCard.module.css";
 import Tag from "../../../../../components/Tag/Tag";
-import { Check } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import Text from "../../../../../components/Text/Text";
 import Button from "../../../../../components/Button/Button";
 
@@ -100,6 +100,9 @@ const SkipSizeCard = ({
         content={isSelected ? "Selected" : "Select this skip"}
         variant={isSelected ? "primary" : "secondary"}
         onClick={onClick}
+        {...(!isSelected && {
+          iconRight: <ArrowRight size={16} color="var(--colors-white)" />,
+        })}
       />
     </div>
   );

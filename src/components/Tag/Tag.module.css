@@ -4,4 +4,5 @@
   border-radius: var(--radius-lg);
   padding: var(--spacing-xs) var(--spacing-smd);
   background-color: var(--colors-blue);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
 }

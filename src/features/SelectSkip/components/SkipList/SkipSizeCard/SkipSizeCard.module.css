@@ -7,6 +7,7 @@
   border: 2px solid var(--colors-gray700);
   border-radius: var(--radius-sm);
   cursor: pointer;
+  user-select: none;
 
   &:hover {
     border-color: var(--colors-darkerBlue);
