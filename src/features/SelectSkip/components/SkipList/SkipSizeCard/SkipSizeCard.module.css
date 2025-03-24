@@ -27,6 +27,14 @@
 .skipImage {
   width: 100%;
   height: 192px;
+  object-fit: cover;
+
+  overflow-clip-margin: content-box;
+  overflow: clip;
+
+  @media (max-width: 767px) {
+    height: 144px;
+  }
 }
 
 .tagWrapper {

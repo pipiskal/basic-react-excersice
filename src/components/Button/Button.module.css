@@ -27,6 +27,14 @@
     }
   }
 
+  &.md {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  &.lg {
+    padding: var(--spacing-smd) var(--spacing-md);
+  }
+
   transition: all 0.15s ease;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

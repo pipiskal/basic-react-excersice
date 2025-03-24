@@ -1,9 +1,8 @@
-import { JSX } from "react";
 import styles from "./SkipSizeCard.module.css";
-import Tag from "../../Tag/Tag";
+import Tag from "../../../../../components/Tag/Tag";
 import { Check } from "lucide-react";
-import Text from "../../Text/Text";
-import Button from "../../Button/Button";
+import Text from "../../../../../components/Text/Text";
+import Button from "../../../../../components/Button/Button";
 
 type SkipSizeCardProps = {
   image: string;
@@ -25,7 +24,7 @@ const SkipSizeCard = ({
   isSelected = false,
   isPrivateProperty = false,
   onClick,
-}: SkipSizeCardProps): JSX.Element => {
+}: SkipSizeCardProps) => {
   return (
     <div
       className={`${styles.wrapper} ${isSelected && styles.selectedItem}`}

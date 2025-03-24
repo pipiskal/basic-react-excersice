@@ -1,4 +1,3 @@
-import { JSX } from "react";
 import { createElement } from "react";
 
 const TEXT_SIZES = {
@@ -42,12 +41,12 @@ const Text = ({
   color = "white",
   fw = 600,
   mb = 0,
-}: TextProps): JSX.Element => {
+}: TextProps) => {
   const renderCorrectHtmlType = () => {
     const styles = {
       fontSize: `${TEXT_SIZES[size]}px`,
       color: COLORS[color],
-      lineHeight: "20px",
+      lineHeight: "24px",
       textTransform: "none",
       fontWeight: fw,
       marginBottom: mb,

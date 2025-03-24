@@ -7,6 +7,7 @@ body {
 }
 
 body {
+  position: relative;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -36,6 +37,7 @@ body {
   --spacing-xl: 32px;
   --spacing-2xl: 48px;
   --spacing-3xl: 64px;
+  --spacing-4xl: 128px;
 
   /* Radius */
   --radius-xs: 4px;
