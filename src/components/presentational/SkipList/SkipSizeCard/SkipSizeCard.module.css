@@ -1,0 +1,46 @@
+.wrapper {
+  max-width: 390px;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-lg);
+  background-color: var(--colors-gray800);
+  border: 2px solid var(--colors-gray700);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--colors-darkerBlue);
+  }
+
+  &.selected {
+    border-color: var(--colors-blue);
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  margin-bottom: var(--spacing-md);
+}
+
+.skipImage {
+  width: 100%;
+  height: 192px;
+}
+
+.tagWrapper {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-sm);
+}
+
+.checkMark {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+}
+
+.priceWrapper {
+  margin-bottom: var(--spacing-lg);
+}

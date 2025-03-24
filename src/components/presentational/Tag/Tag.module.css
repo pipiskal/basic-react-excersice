@@ -1,0 +1,7 @@
+.wrapper {
+  width: fit-content;
+  user-select: none;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xs) var(--spacing-smd);
+  background-color: var(--colors-blue);
+}

@@ -1,13 +1,53 @@
+*,
+html,
 body {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Colors */
+  --colors-white: rgba(255, 255, 255, 1);
+  --colors-blue: rgba(0, 55, 193, 1);
+  --colors-darkerBlue: rgba(0, 45, 161, 1);
+  /* --colors-lightGray: rgba(229, 231, 235, 1); */
+  --colors-gray: rgba(156, 163, 175, 1);
+  --colors-gray700: rgba(42, 42, 42, 1);
+  --colors-gray800: rgba(28, 28, 28, 1);
+  --colors-backgroundGray: rgba(18, 18, 18, 1);
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-smd: 12px;
+  --spacing-md: 16px;
+  --spacing-mdl: 20px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+
+  /* Radius */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-smd: 12px;
+  --radius-md: 16px;
+  --radius-mdl: 20px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 50%;
+}
+
+.align-justify-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
