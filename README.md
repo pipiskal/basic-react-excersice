@@ -1,46 +1,64 @@
-# Getting Started with Create React App
+# React exercise.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+First of all i wanted to implement the replica without using the help of external libraries so the code will be more pure and clean.
 
-## Available Scripts
+I like the idea of using css modules with the tsx cause its like a package that is isolated. You can drag it and drop in anywhere especially if its a pure component.
 
-In the project directory, you can run:
+## Thought Process and Business analysis
 
-### `npm start`
+1. Analyzed the design for components - Look and feel - Find inconsistencies ("checkmark not being displayed when a skip is selected") - get a feeling how the page works.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. Checking deeper the functionality - What happens on refresh? Does it keep the state or the user have to provide the info again. What happens on skip selection (Bottom sheet appears) - whats its purpose ? (Go to the next step from the whole "registration process").
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+3. Trying to understand the real use case of an exercise like that and create the User Story in my mind. For example :
+   - We need to collect data from a 6 step process from the user
+   - We have the need to go back and forth in each step so the information can be changed.
+   - We want you to select something so once you made a selection you can only change to an other option. Meaning you cant go to the next step if you do not provide details
 
-### `npm test`
+## Technical Implementation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Its always better to work with a design system in mind so you have access only to the colors, spacing etc you need and decided with the design. In Our case i did a basic design system using css variable for the colors spacing etc that are being used in the page so i wont have to look for the color or the spacing every single time.
 
-### `npm run build`
+2. Folder architecture.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ### components
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   Its a small showcase but some of core separation of concerns are there. For example components containers the core pure presentation components for the whole app. They will never have any business logic its just pure components.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ### features
 
-### `npm run eject`
+   in my mind under features live basically the container components. Meaning it has business logic (fetching data etc,). So the whole 6 step process its a feature. It could be separated completely a team to work on and was one goal (gather info from the user) make the final api call and its done.Most likely you wont see it anywhere else after that process
+
+   ### modules - misc
+
+   Can represent logic of your consts - common - helper functions etc
+
+   ### Services
+
+   Services generally encapsulate the logic of your api calls. For example SKIP.CREATE_NEW(skip). You might want to create multiple skips in different places so its easier to maintain expand and work with having your serviced gather in one place.
+
+   I have not create that in our case example cause a simple custom hook with a specific goal to fetch the list was enough.
+
+   I can go on describing The folder architecture but it most cases it depends on preferences or what the team has agreed upon and the project needs.
+
+3. Analyze in my mind how the state will flow. Basic revisiting step 3 of Thought Process and Business analysis. Creating a clear image in my mind how this will work and then start implementing
+
+4. Creating of Basic pure components.
+
+   ### Text :
+
+   a generic text component that will provide us with the the needs of the site. Colors sizes etc. Another approach is to make a deal with the designer that h1 for example will look like that always. and structure from the beginning under your css globals your typography. Maybe a mid ore useful on a server side site not a client side with react
+
+   ### Button :
+
+   With a couple of variants etc.
+
+   ### Spinner :
+
+   Simple spinner using the icon library with a simple rotate animation
+
+   ### Tag :
+
+   A simple tag just for the design needs
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
