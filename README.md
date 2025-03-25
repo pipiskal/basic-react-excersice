@@ -17,7 +17,7 @@ I like the idea of using css modules with the tsx cause its like a package that 
 
 # Technical Implementation
 
-## Its always better to work with a design system in mind so you have access only to the colors, spacing etc you need and decided with the design. In Our case i did a basic design system using css variable for the colors spacing etc that are being used in the page so i wont have to look for the color or the spacing every single time.
+#### Its always better to work with a design system in mind so you have access only to the colors, spacing etc you need and decided with the design. In Our case i did a basic design system using css variable for the colors spacing etc that are being used in the page so i wont have to look for the color or the spacing every single time.
 
 ### 1. Folder architecture.
 
@@ -41,7 +41,9 @@ I have not create that in our case example cause a simple custom hook with a spe
 
 I can go on describing The folder architecture but it most cases it depends on preferences or what the team has agreed upon and the project needs.
 
-### 2. State management. Analyze in my mind how the state will flow. Basic revisiting step 3 of Thought Process and Business analysis. Creating a clear image in my mind how this will work and then start implementing
+### 2. State management.
+
+Analyze in my mind how the state will flow. Basic revisiting step 3 of Thought Process and Business analysis. Creating a clear image in my mind how this will work and then start implementing
 
 ### 3. Creating Basic Pure components
 
@@ -61,4 +63,28 @@ Simple spinner using the icon library with a simple rotate animation
 
 A simple tag just for the design needs
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 4. Wrapping up.
+
+- I have my components my "design system" my state management in mind. Time to create the SkipCard that take part of the Skip list. I design the SkipCard to be specific for this use case. Meaning it includes text that its specific for the use case. It could be more generic props like title, description etc and the whole text would be provided from the List(parent). For our case now i think its ok
+
+- Separating the list and the card component its easier to maintain i believe. I could have be done in one file but i prefer it that way
+
+- Isolating The fetching -- and the rest of the business logic under the custom hook
+
+- Finally our feature file SelectSkip is clear. It handle the "business" - state (I uplifted the state cause it was needed in the BottomSheet as well)
+
+- I believe its maintainable easy to read and debug.
+
+## Improvements :
+
+- The fetching is basic and the error handling cause its a small case. Generally i encapsulate the fetching mechanism under a request that can accept "GET", "PATCH", "DELETE" etc, so i wont write again and again the boiler plate. I can handle global errors like 401 if you are working with rest or adjust it for something else like GraphQl
+
+- The loading spinner appears every single time the components gets rendered. We can implement custom caching perhaps with closure if i have it in "memory" do not run the call again if we know that the data wont change to reduce the network calls and we don not break the flow if the user when its going back and forth.
+
+For that i like Tanstack query for client applications cause it has a very consistent way of getting info and making mutations also caching where you stale data. So it seems that like 1 person wrote the code
+
+- Personally for that use case i did not feel to use more complex technics like Provider or reducer for my state. The code is simpler that way anyone can read it and modify it. Also no need for useMemo or something for memoization
+
+- Finally for the design if i could provided a feedback, i felt as a user that i wanted the info to be more clear ("the contrast") for the price. I am gonna pay so i am always careful as a user that i have selected correctly and you point my selection Large and clear.
+
+Thats it i guess i am open for any questions - improvements etc. Thank you.
