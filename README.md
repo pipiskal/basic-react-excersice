@@ -49,7 +49,9 @@ Analyze in my mind how the state will flow. Basic revisiting step 3 of Thought P
 
 #### Text :
 
-a generic text component that will provide us with the the needs of the site. Colors sizes etc. Another approach is to make a deal with the designer that h1 for example will look like that always. and structure from the beginning under your css globals your typography. Maybe a mid ore useful on a server side site not a client side with react
+a generic text component that will provide us with the the needs of the site. Colors sizes etc. Another approach is to make a deal with the designer that h1 for example will look like that always. and structure from the beginning under your css globals your typography. Maybe a mid ore useful on a server side site not a client side with react.
+
+Under text you can also have your "keys" for the translation and with typescript "protect it" to accept it the correct context. The same goes with design system. You can make generic types from our theme.ts for example and add them in the components that use color - spacings - Icons etc as props so in case we add a new color it will appear everywhere.
 
 #### Button :
 
