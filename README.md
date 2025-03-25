@@ -37,7 +37,7 @@ Can represent logic of your consts - common - helper functions etc
 
 Services generally encapsulate the logic of your api calls. For example SKIP.CREATE_NEW(skip). You might want to create multiple skips in different places so its easier to maintain expand and work with having your serviced gather in one place.
 
-I have not create that in our case example cause a simple custom hook with a specific goal to fetch the list was enough.
+I have not created that in our case example cause a simple custom hook with a specific goal to fetch the list was enough.
 
 I can go on describing The folder architecture but it most cases it depends on preferences or what the team has agreed upon and the project needs.
 
