@@ -67,6 +67,8 @@ A simple tag just for the design needs
 
 - I have my components my "design system" my state management in mind. Time to create the SkipCard that take part of the Skip list. I design the SkipCard to be specific for this use case. Meaning it includes text that its specific for the use case. It could be more generic props like title, description etc and the whole text would be provided from the List(parent). For our case now i think its ok.
 
+- For simplicity i did not tried to calculate the price after tax to show it to the user.
+
 - Separating the list and the card component its easier to maintain i believe. I could have be done in one file but i prefer it that way
 
 - Isolating The fetching -- and the rest of the business logic under the custom hook
