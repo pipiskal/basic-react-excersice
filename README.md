@@ -65,7 +65,7 @@ A simple tag just for the design needs
 
 ### 4. Wrapping up.
 
-- I have my components my "design system" my state management in mind. Time to create the SkipCard that take part of the Skip list. I design the SkipCard to be specific for this use case. Meaning it includes text that its specific for the use case. It could be more generic props like title, description etc and the whole text would be provided from the List(parent). For our case now i think its ok
+- I have my components my "design system" my state management in mind. Time to create the SkipCard that take part of the Skip list. I design the SkipCard to be specific for this use case. Meaning it includes text that its specific for the use case. It could be more generic props like title, description etc and the whole text would be provided from the List(parent). For our case now i think its ok.
 
 - Separating the list and the card component its easier to maintain i believe. I could have be done in one file but i prefer it that way
 
@@ -79,9 +79,11 @@ A simple tag just for the design needs
 
 - The fetching is basic and the error handling cause its a small case. Generally i encapsulate the fetching mechanism under a request that can accept "GET", "PATCH", "DELETE" etc, so i wont write again and again the boiler plate. I can handle global errors like 401 if you are working with rest or adjust it for something else like GraphQl
 
+- Component wise - Recently i am working with Mantine so i could use that i guess for the basic components. But custom ones work as well.
+
 - The loading spinner appears every single time the components gets rendered. We can implement custom caching perhaps with closure if i have it in "memory" do not run the call again if we know that the data wont change to reduce the network calls and we don not break the flow if the user when its going back and forth.
 
-For that i like Tanstack query for client applications cause it has a very consistent way of getting info and making mutations also caching where you stale data. So it seems that like 1 person wrote the code
+For that i like Tanstack query for client applications cause it has a very consistent way of getting info and making mutations also caching where you stale data. So it seems that like 1 person wrote the code.
 
 - Personally for that use case i did not feel to use more complex technics like Provider or reducer for my state. The code is simpler that way anyone can read it and modify it. Also no need for useMemo or something for memoization
 
