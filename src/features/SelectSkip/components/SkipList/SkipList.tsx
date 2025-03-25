@@ -55,8 +55,7 @@ const SkipList = ({
                 key={skip.id}
                 isSelected={selectedSkipId === skip.id}
                 image={"/images/skipImage.png"}
-                title={"Takis"}
-                description={"14 day hire period"}
+                numberOfHiringDays={skip.hire_period_days}
                 pricePerWeek={skip.price_before_vat}
                 numberOfYards={skip.size}
                 onClick={() => onSkipSelection(skip.id)}

@@ -6,8 +6,6 @@ const useSkipQuery = () => {
   const [hasError, setHasError] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  console.log("skips", skips);
-
   const getSkips = async () => {
     const url =
       "https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft";

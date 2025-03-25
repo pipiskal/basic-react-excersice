@@ -6,10 +6,9 @@ import Button from "../../../../../components/Button/Button";
 
 type SkipSizeCardProps = {
   image: string;
-  title: string;
-  description: string;
   pricePerWeek: number;
   numberOfYards: number;
+  numberOfHiringDays: number;
   isSelected?: boolean;
   isPrivateProperty?: boolean;
   onClick: () => void;
@@ -17,10 +16,9 @@ type SkipSizeCardProps = {
 
 const SkipSizeCard = ({
   image,
-  title,
-  description,
   pricePerWeek,
   numberOfYards,
+  numberOfHiringDays,
   isSelected = false,
   isPrivateProperty = false,
   onClick,
@@ -74,7 +72,7 @@ const SkipSizeCard = ({
       />
 
       <Text
-        content={description}
+        content={`${numberOfHiringDays} day hire period`}
         type="paragraph"
         size="sm"
         color="gray"
