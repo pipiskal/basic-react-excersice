@@ -23,11 +23,11 @@ I like the idea of using css modules with the tsx cause its like a package that 
 
 #### components
 
-Its a small showcase but some of core separation of concerns are there. For example components containers the core pure presentation components for the whole app. They will never have any business logic its just pure components.
+Its a small showcase but some of core separation of concerns are there. For example components hold the core pure presentation components for the whole app. They will never have any business logic its just pure components.
 
 #### features
 
-in my mind under features live basically the container components. Meaning it has business logic (fetching data etc,). So the whole 6 step process its a feature. It could be separated completely a team to work on and was one goal (gather info from the user) make the final api call and its done.Most likely you wont see it anywhere else after that process
+In my mind under features live basically the container components. Meaning it has business logic (fetching data etc,). So the whole 6 step process its a feature. It could be separated completely for a team to work on and has one goal (gather info from the user) make the final api call and its done. Most likely you wont see it anywhere else after that process
 
 #### modules - misc
 
@@ -86,6 +86,8 @@ A simple tag just for the design needs
 For that i like Tanstack query for client applications cause it has a very consistent way of getting info and making mutations also caching where you stale data. So it seems that like 1 person wrote the code.
 
 - Personally for that use case i did not feel to use more complex technics like Provider or reducer for my state. The code is simpler that way anyone can read it and modify it. Also no need for useMemo or something for memoization
+
+- We can add some testing. Unit tests for the components do they work as expected with the provided props?. Integration testing ? Mock fetching and make sure the list is working property. Also an end to end testing? The whole 6 step process that is working correctly.
 
 - Finally for the design if i could provided a feedback, i felt as a user that i wanted the info to be more clear ("the contrast") for the price. I am gonna pay so i am always careful as a user that i have selected correctly and you point my selection Large and clear.
 
