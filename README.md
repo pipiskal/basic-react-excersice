@@ -67,7 +67,7 @@ A simple tag just for the design needs
 
 ### 4. Wrapping up.
 
-- I have my components my "design system" my state management in mind. Time to create the SkipCard that take part of the Skip list. I design the SkipCard to be specific for this use case. Meaning it includes text that its specific for the use case. It could be more generic props like title, description etc and the whole text would be provided from the List(parent). For our case now i think its ok.
+- I have my components, my "design system", my state management in mind. Time to create the SkipCard that take part of the Skip list. I design the SkipCard to be specific for this use case. Meaning it includes text that its specific for the use case. It could be more generic props like title, description etc and the whole text would be provided from the List(parent). For our case now i think its ok.
 
 - For simplicity i did not tried to calculate the price after tax to show it to the user.
 
@@ -87,7 +87,7 @@ A simple tag just for the design needs
 
 - The loading spinner appears every single time the components gets rendered. We can implement custom caching perhaps with closure if i have it in "memory" do not run the call again if we know that the data wont change to reduce the network calls and we don not break the flow if the user when its going back and forth.
 
-For that i like Tanstack query for client applications cause it has a very consistent way of getting info and making mutations also caching where you stale data. So it seems that like 1 person wrote the code.
+For that i like Tanstack query for client applications cause it has a very consistent way of getting info and making mutations. So it seems that like 1 person wrote the code. Caching as well.
 
 - Personally for that use case i did not feel to use more complex technics like Provider or reducer for my state. The code is simpler that way anyone can read it and modify it. Also no need for useMemo or something for memoization
 
